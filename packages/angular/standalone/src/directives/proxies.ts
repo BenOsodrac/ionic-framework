@@ -14,6 +14,7 @@ import { defineCustomElement as defineIonApp } from '@ionic/core/components/ion-
 import { defineCustomElement as defineIonAvatar } from '@ionic/core/components/ion-avatar.js';
 import { defineCustomElement as defineIonBackdrop } from '@ionic/core/components/ion-backdrop.js';
 import { defineCustomElement as defineIonBadge } from '@ionic/core/components/ion-badge.js';
+import { defineCustomElement as defineIonBottomBar } from '@ionic/core/components/ion-bottom-bar.js';
 import { defineCustomElement as defineIonBreadcrumb } from '@ionic/core/components/ion-breadcrumb.js';
 import { defineCustomElement as defineIonBreadcrumbs } from '@ionic/core/components/ion-breadcrumbs.js';
 import { defineCustomElement as defineIonButton } from '@ionic/core/components/ion-button.js';
@@ -358,6 +359,30 @@ export class IonBadge {
 
 
 export declare interface IonBadge extends Components.IonBadge {}
+
+
+@ProxyCmp({
+  defineCustomElementFn: defineIonBottomBar,
+  inputs: ['collapse', 'mode', 'translucent']
+})
+@Component({
+  selector: 'ion-bottom-bar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['collapse', 'mode', 'translucent'],
+  standalone: true
+})
+export class IonBottomBar {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface IonBottomBar extends Components.IonBottomBar {}
 
 
 @ProxyCmp({

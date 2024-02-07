@@ -10,6 +10,7 @@ import { defineCustomElement as defineIonAccordionGroup } from '@ionic/core/comp
 import { defineCustomElement as defineIonAvatar } from '@ionic/core/components/ion-avatar.js';
 import { defineCustomElement as defineIonBackdrop } from '@ionic/core/components/ion-backdrop.js';
 import { defineCustomElement as defineIonBadge } from '@ionic/core/components/ion-badge.js';
+import { defineCustomElement as defineIonBottomBar } from '@ionic/core/components/ion-bottom-bar.js';
 import { defineCustomElement as defineIonBreadcrumb } from '@ionic/core/components/ion-breadcrumb.js';
 import { defineCustomElement as defineIonBreadcrumbs } from '@ionic/core/components/ion-breadcrumbs.js';
 import { defineCustomElement as defineIonButton } from '@ionic/core/components/ion-button.js';
@@ -111,6 +112,12 @@ export const IonBackdrop = /*@__PURE__*/ defineContainer<JSX.IonBackdrop>('ion-b
 
 export const IonBadge = /*@__PURE__*/ defineContainer<JSX.IonBadge>('ion-badge', defineIonBadge, [
   'color'
+]);
+
+
+export const IonBottomBar = /*@__PURE__*/ defineContainer<JSX.IonBottomBar>('ion-bottom-bar', defineIonBottomBar, [
+  'collapse',
+  'translucent'
 ]);
 
 

@@ -175,6 +175,11 @@ ion-badge,css-prop,--padding-end
 ion-badge,css-prop,--padding-start
 ion-badge,css-prop,--padding-top
 
+ion-bottom-bar,none
+ion-bottom-bar,prop,collapse,"fade" | undefined,undefined,false,false
+ion-bottom-bar,prop,mode,"ios" | "md",undefined,false,false
+ion-bottom-bar,prop,translucent,boolean,false,false,false
+
 ion-breadcrumb,shadow
 ion-breadcrumb,prop,active,boolean,false,false,false
 ion-breadcrumb,prop,color,"danger" | "dark" | "light" | "medium" | "primary" | "secondary" | "success" | "tertiary" | "warning" | string & Record<never, never> | undefined,undefined,false,false

@@ -368,6 +368,20 @@ export namespace Components {
          */
         "mode"?: "ios" | "md";
     }
+    interface IonBottomBar {
+        "floating": boolean;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        "transparent": boolean;
+    }
+    interface IonBottomBarItem {
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+    }
     interface IonBreadcrumb {
         /**
           * If `true`, the breadcrumb will take on a different look to show that it is the currently active breadcrumb. Defaults to `true` for the last breadcrumb if it is not set on any.
@@ -3552,6 +3566,18 @@ declare global {
         prototype: HTMLIonBadgeElement;
         new (): HTMLIonBadgeElement;
     };
+    interface HTMLIonBottomBarElement extends Components.IonBottomBar, HTMLStencilElement {
+    }
+    var HTMLIonBottomBarElement: {
+        prototype: HTMLIonBottomBarElement;
+        new (): HTMLIonBottomBarElement;
+    };
+    interface HTMLIonBottomBarItemElement extends Components.IonBottomBarItem, HTMLStencilElement {
+    }
+    var HTMLIonBottomBarItemElement: {
+        prototype: HTMLIonBottomBarItemElement;
+        new (): HTMLIonBottomBarItemElement;
+    };
     interface HTMLIonBreadcrumbElementEventMap {
         "ionFocus": void;
         "ionBlur": void;
@@ -4630,6 +4656,8 @@ declare global {
         "ion-back-button": HTMLIonBackButtonElement;
         "ion-backdrop": HTMLIonBackdropElement;
         "ion-badge": HTMLIonBadgeElement;
+        "ion-bottom-bar": HTMLIonBottomBarElement;
+        "ion-bottom-bar-item": HTMLIonBottomBarItemElement;
         "ion-breadcrumb": HTMLIonBreadcrumbElement;
         "ion-breadcrumbs": HTMLIonBreadcrumbsElement;
         "ion-button": HTMLIonButtonElement;
@@ -5034,6 +5062,20 @@ declare namespace LocalJSX {
           * The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`. For more information on colors, see [theming](/docs/theming/basics).
          */
         "color"?: Color;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+    }
+    interface IonBottomBar {
+        "floating"?: boolean;
+        /**
+          * The mode determines which platform styles to use.
+         */
+        "mode"?: "ios" | "md";
+        "transparent"?: boolean;
+    }
+    interface IonBottomBarItem {
         /**
           * The mode determines which platform styles to use.
          */
@@ -8085,6 +8127,8 @@ declare namespace LocalJSX {
         "ion-back-button": IonBackButton;
         "ion-backdrop": IonBackdrop;
         "ion-badge": IonBadge;
+        "ion-bottom-bar": IonBottomBar;
+        "ion-bottom-bar-item": IonBottomBarItem;
         "ion-breadcrumb": IonBreadcrumb;
         "ion-breadcrumbs": IonBreadcrumbs;
         "ion-button": IonButton;
@@ -8182,6 +8226,8 @@ declare module "@stencil/core" {
             "ion-back-button": LocalJSX.IonBackButton & JSXBase.HTMLAttributes<HTMLIonBackButtonElement>;
             "ion-backdrop": LocalJSX.IonBackdrop & JSXBase.HTMLAttributes<HTMLIonBackdropElement>;
             "ion-badge": LocalJSX.IonBadge & JSXBase.HTMLAttributes<HTMLIonBadgeElement>;
+            "ion-bottom-bar": LocalJSX.IonBottomBar & JSXBase.HTMLAttributes<HTMLIonBottomBarElement>;
+            "ion-bottom-bar-item": LocalJSX.IonBottomBarItem & JSXBase.HTMLAttributes<HTMLIonBottomBarItemElement>;
             "ion-breadcrumb": LocalJSX.IonBreadcrumb & JSXBase.HTMLAttributes<HTMLIonBreadcrumbElement>;
             "ion-breadcrumbs": LocalJSX.IonBreadcrumbs & JSXBase.HTMLAttributes<HTMLIonBreadcrumbsElement>;
             "ion-button": LocalJSX.IonButton & JSXBase.HTMLAttributes<HTMLIonButtonElement>;

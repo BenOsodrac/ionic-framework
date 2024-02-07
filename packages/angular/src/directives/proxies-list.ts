@@ -10,6 +10,7 @@ export const DIRECTIVES = [
   d.IonAvatar,
   d.IonBackdrop,
   d.IonBadge,
+  d.IonBottomBar,
   d.IonBreadcrumb,
   d.IonBreadcrumbs,
   d.IonButton,
