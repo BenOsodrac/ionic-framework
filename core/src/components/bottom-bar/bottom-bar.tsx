@@ -48,11 +48,7 @@ export class BottomBar implements ComponentInterface {
           [`bottom-bar-transparent`]: transparent,
         }}
       >
-        <nav>
-          <ul>
-            <slot></slot>
-          </ul>
-        </nav>
+        <slot></slot>
       </Host>
     );
   }
