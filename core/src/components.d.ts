@@ -377,6 +377,7 @@ export namespace Components {
         "transparent": boolean;
     }
     interface IonBottomBarItem {
+        "disabled": boolean;
         /**
           * The mode determines which platform styles to use.
          */
@@ -5076,6 +5077,7 @@ declare namespace LocalJSX {
         "transparent"?: boolean;
     }
     interface IonBottomBarItem {
+        "disabled"?: boolean;
         /**
           * The mode determines which platform styles to use.
          */

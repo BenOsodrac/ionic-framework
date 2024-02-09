@@ -11,6 +11,7 @@ export const DIRECTIVES = [
   d.IonBackdrop,
   d.IonBadge,
   d.IonBottomBar,
+  d.IonBottomBarItem,
   d.IonBreadcrumb,
   d.IonBreadcrumbs,
   d.IonButton,

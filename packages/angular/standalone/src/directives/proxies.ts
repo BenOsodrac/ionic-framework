@@ -15,6 +15,7 @@ import { defineCustomElement as defineIonAvatar } from '@ionic/core/components/i
 import { defineCustomElement as defineIonBackdrop } from '@ionic/core/components/ion-backdrop.js';
 import { defineCustomElement as defineIonBadge } from '@ionic/core/components/ion-badge.js';
 import { defineCustomElement as defineIonBottomBar } from '@ionic/core/components/ion-bottom-bar.js';
+import { defineCustomElement as defineIonBottomBarItem } from '@ionic/core/components/ion-bottom-bar-item.js';
 import { defineCustomElement as defineIonBreadcrumb } from '@ionic/core/components/ion-breadcrumb.js';
 import { defineCustomElement as defineIonBreadcrumbs } from '@ionic/core/components/ion-breadcrumbs.js';
 import { defineCustomElement as defineIonButton } from '@ionic/core/components/ion-button.js';
@@ -363,14 +364,14 @@ export declare interface IonBadge extends Components.IonBadge {}
 
 @ProxyCmp({
   defineCustomElementFn: defineIonBottomBar,
-  inputs: ['collapse', 'mode', 'translucent']
+  inputs: ['floating', 'mode', 'transparent']
 })
 @Component({
   selector: 'ion-bottom-bar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['collapse', 'mode', 'translucent'],
+  inputs: ['floating', 'mode', 'transparent'],
   standalone: true
 })
 export class IonBottomBar {
@@ -383,6 +384,30 @@ export class IonBottomBar {
 
 
 export declare interface IonBottomBar extends Components.IonBottomBar {}
+
+
+@ProxyCmp({
+  defineCustomElementFn: defineIonBottomBarItem,
+  inputs: ['mode']
+})
+@Component({
+  selector: 'ion-bottom-bar-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['mode'],
+  standalone: true
+})
+export class IonBottomBarItem {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface IonBottomBarItem extends Components.IonBottomBarItem {}
 
 
 @ProxyCmp({

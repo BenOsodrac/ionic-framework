@@ -281,14 +281,14 @@ export declare interface IonBadge extends Components.IonBadge {}
 
 
 @ProxyCmp({
-  inputs: ['collapse', 'mode', 'translucent']
+  inputs: ['floating', 'mode', 'transparent']
 })
 @Component({
   selector: 'ion-bottom-bar',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['collapse', 'mode', 'translucent'],
+  inputs: ['floating', 'mode', 'transparent'],
 })
 export class IonBottomBar {
   protected el: HTMLElement;
@@ -300,6 +300,28 @@ export class IonBottomBar {
 
 
 export declare interface IonBottomBar extends Components.IonBottomBar {}
+
+
+@ProxyCmp({
+  inputs: ['mode']
+})
+@Component({
+  selector: 'ion-bottom-bar-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['mode'],
+})
+export class IonBottomBarItem {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface IonBottomBarItem extends Components.IonBottomBarItem {}
 
 
 @ProxyCmp({

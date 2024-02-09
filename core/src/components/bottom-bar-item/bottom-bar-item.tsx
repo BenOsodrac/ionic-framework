@@ -1,5 +1,5 @@
 import type { ComponentInterface } from '@stencil/core';
-import { Component, Element, Host, h } from '@stencil/core';
+import { Component, Element, Host, Prop, h } from '@stencil/core';
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -11,9 +11,15 @@ import { Component, Element, Host, h } from '@stencil/core';
 export class BottomBarItem implements ComponentInterface {
   @Element() el!: HTMLElement;
 
+  @Prop() disabled = false;
+
   render() {
     return (
-      <Host>
+      <Host
+        class={{
+          [`bottom-bar-item-disabled`]: this.disabled,
+        }}
+      >
         <slot name="icon"></slot>
         <slot name="label"></slot>
       </Host>
