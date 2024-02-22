@@ -1,9 +1,13 @@
 @import "./picker-internal.scss";
 @import "./picker-internal.vars.scss";
-@import "../../themes/ionic.globals.md";
+@import "../../themes/native/ionic.globals.md";
 
 :host .picker-before {
-  background: linear-gradient(to bottom, rgba(#{$picker-fade-background}, 1) 20%, rgba(#{$picker-fade-background}, 0) 90%);
+  background: linear-gradient(
+    to bottom,
+    rgba(#{$picker-fade-background}, 1) 20%,
+    rgba(#{$picker-fade-background}, 0) 90%
+  );
 }
 
 :host .picker-after {

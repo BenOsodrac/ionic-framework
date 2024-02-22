@@ -1,7 +1,8 @@
-@import "./button";
+@import "./button.common";
+@import "../../themes/native/ionic.native-globals.scss";
+@import "./button.vars";
 @import "./button.ios.vars";
 @import "../toolbar/toolbar.ios.vars";
-
 
 // iOS Button
 // --------------------------------------------------
@@ -24,7 +25,6 @@
   letter-spacing: #{$button-ios-letter-spacing};
 }
 
-
 // iOS Solid Button
 // --------------------------------------------------
 
@@ -37,7 +37,6 @@
   --background-hover-opacity: 1;
 }
 
-
 // iOS Outline Button
 // --------------------------------------------------
 
@@ -48,10 +47,9 @@
   --background-activated: #{ion-color(primary, base)};
   --background-focused: #{ion-color(primary, base)};
   --background-hover: transparent;
-  --background-focused-opacity: .1;
+  --background-focused-opacity: 0.1;
   --color-activated: #{ion-color(primary, contrast)};
 }
-
 
 // iOS Clear Button
 // --------------------------------------------------
@@ -61,12 +59,11 @@
   --background-activated-opacity: 0;
   --background-focused: #{ion-color(primary, base)};
   --background-hover: transparent;
-  --background-focused-opacity: .1;
+  --background-focused-opacity: 0.1;
 
   font-size: #{$button-ios-clear-font-size};
   font-weight: #{$button-ios-clear-font-weight};
 }
-
 
 // iOS Toolbar Buttons
 // --------------------------------------------------
@@ -81,11 +78,10 @@
  * can add the different font size/weight in a toolbar
  * but still let "size"/"strong" override it.
  */
- :host(.in-buttons) {
-   font-size: #{$toolbar-ios-button-font-size};
-   font-weight: 400;
- }
-
+:host(.in-buttons) {
+  font-size: #{$toolbar-ios-button-font-size};
+  font-weight: 400;
+}
 
 // iOS Button Sizes
 // --------------------------------------------------
@@ -119,7 +115,6 @@
   --padding-bottom: 0;
 }
 
-
 // iOS Round Button
 // --------------------------------------------------
 
@@ -131,14 +126,12 @@
   --padding-bottom: #{$button-ios-round-padding-bottom};
 }
 
-
 // iOS Strong Button
 // --------------------------------------------------
 
 :host(.button-strong) {
   font-weight: #{$button-ios-strong-font-weight};
 }
-
 
 // iOS Button Focused
 // --------------------------------------------------
@@ -155,7 +148,6 @@
 :host(.button-solid.ion-color.ion-focused) .button-native::after {
   background: #{current-color(shade)};
 }
-
 
 // iOS Button Hover
 // --------------------------------------------------
@@ -186,13 +178,13 @@
   // Solid buttons inside of a toolbar should use a tint of the current
   // background so use white to tint it, but this should not apply
   // when activated
-  :host(:hover.button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color):not(.ion-activated)) .button-native::after {
+  :host(:hover.button-solid.in-toolbar:not(.ion-color):not(.in-toolbar-color):not(.ion-activated))
+    .button-native::after {
     background: #fff;
 
-    opacity: 0.10;
+    opacity: 0.1;
   }
 }
-
 
 // iOS Button Activated
 // --------------------------------------------------

@@ -1,4 +1,4 @@
-@import "../../themes/ionic.globals";
+@import "../../themes/native/ionic.native-globals";
 
 // Picker Internal
 // --------------------------------------------------
@@ -71,7 +71,7 @@
   height: 34px;
 
   transform: translateY(-50%);
-  
+
   background: var(--wheel-highlight-background);
 
   z-index: -1;
