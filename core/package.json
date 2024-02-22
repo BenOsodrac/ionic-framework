@@ -33,6 +33,7 @@
   "dependencies": {
     "@stencil/core": "^4.12.2",
     "ionicons": "^7.2.2",
+    "style-dictionary": "^3.9.2",
     "tslib": "^2.1.0"
   },
   "devDependencies": {
@@ -95,7 +96,8 @@
     "test.e2e.update-snapshots": "npm run test.e2e -- --update-snapshots",
     "test.watch": "jest --watch --no-cache",
     "test.treeshake": "node scripts/treeshaking.js dist/index.js",
-    "validate": "npm run lint && npm run test && npm run build && npm run test.treeshake"
+    "validate": "npm run lint && npm run test && npm run build && npm run test.treeshake",
+    "tokens": "node ./tokens.js"
   },
   "author": "Ionic Team",
   "license": "MIT",
