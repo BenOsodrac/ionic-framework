@@ -1,6 +1,5 @@
-@import "./button.common";
-@import "../../themes/native/ionic.native-globals.scss";
-@import "./button.vars";
+@import "./button.native-common";
+@import "../../themes/native/ionic.globals.ios.scss";
 @import "./button.ios.vars";
 @import "../toolbar/toolbar.ios.vars";
 

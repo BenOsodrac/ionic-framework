@@ -1,4 +1,4 @@
-@import "./ionic.vars.scss";
+@import "../../foundations/ionic.vars.scss";
 
 // Ionic Theme
 // -------------------------------------------------------------------------------------------
@@ -14,15 +14,15 @@
 // - shade: 12% darker version of the base color (mix with black)
 // - tint: 10% lighter version of the base color (mix with white)
 
-$primary: $ionic-color-primary !default;
-$secondary: $ionic-color-secondary !default;
-$tertiary: $ionic-color-primary !default;
-$success: $ionic-color-success !default;
-$warning: $ionic-color-warning !default;
-$danger: $ionic-color-error !default;
-$light: $ionic-color-neutral-50 !default;
-$medium: $ionic-color-neutral-600 !default;
-$dark: $ionic-color-neutral-800 !default;
+$primary: $color-primary !default;
+$secondary: $color-secondary !default;
+$tertiary: $color-primary !default;
+$success: $color-success !default;
+$warning: $color-warning !default;
+$danger: $color-error !default;
+$light: $color-neutral-50 !default;
+$medium: $color-neutral-600 !default;
+$dark: $color-neutral-800 !default;
 
 $colors: (
   primary: (
@@ -85,10 +85,10 @@ $colors: (
 // -------------------------------------------------------------------------------------------
 // Used internally to calculate the default steps
 
-$background-color-value: #fff !default;
+$background-color-value: $color-neutral-10 !default;
 $background-color-rgb-value: 255, 255, 255 !default;
 
-$text-color-value: #000 !default;
+$text-color-value: $color-neutral-900 !default;
 $text-color-rgb-value: 0, 0, 0 !default;
 
 $background-color: var(--ion-background-color, $background-color-value) !default;
@@ -145,3 +145,60 @@ $text-color-step-950: var(--ion-color-step-50, mix($background-color-value, $tex
 // Default General Colors
 // --------------------------------------------------
 $placeholder-text-color: var(--ion-placeholder-color, $text-color-step-600) !default;
+
+// Default Border Sizes
+// --------------------------------------------------
+$ionic-border-size-small: var(--ion-border-size-small, $border-size-small) !default;
+$ionic-border-size-medium: var(--ion-border-size-medium, $border-size-medium) !default;
+$ionic-border-size-large: var(--ion-border-size-large, $border-size-large) !default;
+
+// Default Border Radius
+// --------------------------------------------------
+$ionic-border-radius-square: var(--ion-border-radius-square, $border-radius-square) !default;
+$ionic-border-radius-rounded-small: var(--ion-border-radius-rounded-small, $border-radius-rounded-small) !default;
+$ionic-border-radius-rounded-medium: var(--ion-border-radius-rounded-medium, $border-radius-rounded-medium) !default;
+$ionic-border-radius-rounded-large: var(--ion-border-radius-rounded-large, $border-radius-rounded-large) !default;
+$ionic-border-radius-rounded-x-large: var(--ion-border-radius-rounded-x-large, $border-radius-rounded-x-large) !default;
+$ionic-border-radius-rounded-full: var(--ion-border-radius-rounded-full, $border-radius-rounded-full) !default;
+
+// Default Elevation
+// --------------------------------------------------
+$ionic-elevation-0: var(--ion-elevation-0, $elevation-0) !default;
+$ionic-elevation-1: var(--ion-elevation-1, $elevation-1) !default;
+$ionic-elevation-2: var(--ion-elevation-2, $elevation-2) !default;
+$ionic-elevation-3: var(--ion-elevation-3, $elevation-3) !default;
+$ionic-elevation-4: var(--ion-elevation-4, $elevation-4) !default;
+
+// Default Spacing
+// --------------------------------------------------
+$ionic-space-none: var(--ion-space-none, $space-none) !default;
+$ionic-space-xxs: var(--ion-space-xs, $space-xs) !default;
+$ionic-space-xs: var(--ion-space-s, $space-s) !default;
+$ionic-space-s: var(--ion-space-s, $space-s) !default;
+$ionic-space-base: var(--ion-space-base, $space-base) !default;
+$ionic-space-m: var(--ion-space-m, $space-m) !default;
+$ionic-space-l: var(--ion-space-l, $space-l) !default;
+$ionic-space-xl: var(--ion-space-xl, $space-xl) !default;
+$ionic-space-xxl: var(--ion-space-xxl, $space-xxl) !default;
+$ionic-space-xxxl: var(--ion-space-xxl, $space-xxl) !default;
+$ionic-space-xxxxl: var(--ion-space-xxl, $space-xxl) !default;
+
+// Default Font Weight
+// --------------------------------------------------
+$ionic-font-light: var(--ion-font-light, $font-light) !default;
+$ionic-font-regular: var(--ion-font-regular, $font-regular) !default;
+$ionic-font-semi-bold: var(--ion-font-semi-bold, $font-semi-bold) !default;
+$ionic-font-bold: var(--ion-font-bold, $font-bold) !default;
+
+// Default Font Size
+// --------------------------------------------------
+$ionic-font-size-h1: var(--ion-font-size-h1, $font-size-h1) !default;
+$ionic-font-size-h2: var(--ion-font-size-h2, $font-size-h2) !default;
+$ionic-font-size-h3: var(--ion-font-size-h3, $font-size-h3) !default;
+$ionic-font-size-h4: var(--ion-font-size-h4, $font-size-h4) !default;
+$ionic-font-size-h5: var(--ion-font-size-h5, $font-size-h5) !default;
+$ionic-font-size-h6: var(--ion-font-size-h6, $font-size-h6) !default;
+$ionic-font-size-display: var(--ion-font-size-display, $font-size-display) !default;
+$ionic-font-size-base: var(--ion-font-size-base, $font-size-base) !default;
+$ionic-font-size-s: var(--ion-font-size-s, $font-size-s) !default;
+$ionic-font-size-xs: var(--ion-font-size-xs, $font-size-xs) !default;

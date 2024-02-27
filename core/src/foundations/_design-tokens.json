@@ -280,26 +280,35 @@
     "none": {
       "$value": "0"
     },
-    "xs": {
+    "xxs": {
       "$value": "4px"
     },
-    "s": {
+    "xs": {
       "$value": "8px"
+    },
+    "s": {
+      "$value": "12px"
     },
     "base": {
       "$value": "16px"
     },
     "m": {
-      "$value": "24px"
+      "$value": "20px"
     },
     "l": {
-      "$value": "32px"
+      "$value": "24px"
     },
     "xl": {
-      "$value": "40px"
+      "$value": "28px"
     },
     "xxl": {
-      "$value": "48px"
+      "$value": "32px"
+    },
+    "xxxl": {
+      "$value": "36px"
+    },
+    "xxxxl": {
+      "$value": "40px"
     }
   },
   "border": {

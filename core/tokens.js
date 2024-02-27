@@ -12,7 +12,7 @@ StyleDictionary.registerFormat({
   formatter({ dictionary, file }) {
     // Add a prefix to all variable names
     const prefixedVariables = dictionary.allProperties.map((prop) => {
-      return `  --ionic-${prop.name}: ${prop.value};`;
+      return `  --${prop.name}: ${prop.value};`;
     });
 
     return (
@@ -31,7 +31,7 @@ StyleDictionary.registerFormat({
   formatter({ dictionary, file }) {
     // Add a prefix to all variable names
     const prefixedVariables = dictionary.allProperties.map((prop) => {
-      return `$ionic-${prop.name}: ${prop.value};`;
+      return `$${prop.name}: ${prop.value};`;
     });
 
     return (
@@ -62,10 +62,10 @@ StyleDictionary.registerParser(w3cTokenJsonParser);
 
 // Generate Tokens
 StyleDictionary.extend({
-  source: ['src/tokens/*.json'],
+  source: ['src/foundations/*.json'],
   platforms: {
     css: {
-      buildPath: 'src/themes/ionic/',
+      buildPath: 'src/foundations/',
       transformGroup: 'css',
       files: [
         {
@@ -79,7 +79,7 @@ StyleDictionary.extend({
       ],
     },
     scss: {
-      buildPath: 'src/themes/ionic/',
+      buildPath: 'src/foundations/',
       transformGroup: 'scss',
       files: [
         {
