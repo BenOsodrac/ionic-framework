@@ -1,3 +1,13 @@
+// CSS Variables
+// --------------------------------------------------
+$global-variable-prefix: "ion"; // global css variables prefix
+
+/* Mixin to generate a custom property, based on global prefix + property-name + value*/
+@mixin create-css-variable($property, $value) {
+  $variable-name: #{$global-variable-prefix}-#{$property};
+
+  --#{$variable-name}: #{$value};
+}
 
 /**
  * A heuristic that applies CSS to tablet
@@ -119,7 +129,6 @@
   @return nth($keys, $index);
 }
 
-
 // Breakpoint Mixins
 // ---------------------------------------------------------------------------------
 
@@ -192,7 +201,7 @@
 //    767.98px
 @function breakpoint-max($name, $breakpoints: $screen-breakpoints) {
   $max: map-get($breakpoints, $name);
-  @return if($max and $max > 0, $max - .02, null);
+  @return if($max and $max > 0, $max - 0.02, null);
 }
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
@@ -207,7 +216,6 @@
     @content;
   }
 }
-
 
 // Text Direction - ltr / rtl
 //
@@ -292,7 +300,6 @@
   @content;
 }
 
-
 // SVG Background Image Mixin
 // @param {string} $svg
 // ----------------------------------------------------------
@@ -312,7 +319,7 @@
     $flipped-url: str-replace($flipped-url, "<polygon", "<polygon #{$transform}");
     $flipped-url: url-encode($flipped-url);
 
-    @include ltr () {
+    @include ltr() {
       background-image: url("data:image/svg+xml;charset=utf-8,#{$url}");
     }
     @include rtl() {
@@ -329,7 +336,6 @@
   @if $start == 0 and $end == 0 {
     #{$prop}-left: $start;
     #{$prop}-right: $end;
-
   } @else {
     -webkit-#{$prop}-start: $start;
     #{$prop}-inline-start: $start;
@@ -588,10 +594,10 @@
 
   @each $transform in $transforms {
     @if (str-index($transform, translate3d)) {
-      $transform: str-replace($transform, 'translate3d(');
-      $transform: str-replace($transform, ')');
+      $transform: str-replace($transform, "translate3d(");
+      $transform: str-replace($transform, ")");
 
-      $coordinates: str-split($transform, ',');
+      $coordinates: str-split($transform, ",");
 
       $x: nth($coordinates, 1);
       $y: nth($coordinates, 2);
@@ -608,7 +614,7 @@
     }
   }
 
-  @if $x == '0' or $x == null {
+  @if $x == "0" or $x == null {
     @include multi-dir() {
       transform: $ltr-translate $extra;
     }

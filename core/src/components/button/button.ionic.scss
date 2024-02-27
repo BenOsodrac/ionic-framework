@@ -2,41 +2,7 @@
 @import "./button.common";
 
 // Button New Design System exclusive styles
-// SCSS mixin to generate CSS variables for core properties
-@mixin generate-core-css-variables($prefix, $properties) {
-  @each $property, $value in $properties {
-    $var-name: #{$prefix}-#{$property};
-    --#{$var-name}: #{$value};
-  }
-}
-
-@mixin generate-and-apply-core-styles($prefix, $properties) {
-  @include generate-core-css-variables($prefix, $properties);
-
-  // Apply the generated variables within the selector
-
-  @each $property, $value in $properties {
-    #{$property}: var(--#{$prefix}-#{$property});
-  }
-
-  // Additional styles...
-}
-
-// Define a map of core CSS properties
-$core-properties: (
-  width: 100%,
-  height: 100%,
-  margin: 0,
-  padding: 0,
-  display: block,
-  color: #333,
-  background-color: #fff,
-  font-family: inherit,
-  text-align: center,
-  text-decoration: none,
-  border-color: initial,
-);
 
 :host {
-  @include generate-and-apply-core-styles(ion-button, $core-properties);
+  @include create-css-variable("background-color", $primary);
 }
