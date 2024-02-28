@@ -231,6 +231,7 @@
     }
   },
   "font": {
+    "$type": "font",
     "size": {
       "h1": {
         "$value": "32px"
@@ -277,6 +278,7 @@
     }
   },
   "space": {
+    "$type": "space",
     "none": {
       "$value": "0"
     },
@@ -312,7 +314,9 @@
     }
   },
   "border": {
+    "$type": "border",
     "radius": {
+      "$type": "radius",
       "square": {
         "$value": "0"
       },
@@ -335,6 +339,7 @@
       }
     },
     "size": {
+      "$type": "size",
       "small": {
         "$value": "1px"
       },
@@ -347,6 +352,7 @@
     }
   },
   "elevation": {
+    "$type": "elevation",
     "0": {
       "$value": "none"
     },
